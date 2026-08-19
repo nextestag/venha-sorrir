@@ -1,878 +1,920 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Venha Sorrir - Clínica Odontológica em Itaporanga d'Ajuda, Sergipe"><title>Venha Sorrir | Clínica Odontológica</title><style>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+<head>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta charset="UTF-8">
 
-html {
-    scroll-behavior: smooth;
-}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #FFFFFF;
-    color: #333333;
-    line-height: 1.6;
-}
+    <meta
+        name="description"
+        content="Venha Sorrir - Clínica Odontológica em Itaporanga d'Ajuda, Sergipe."
+    >
 
-:root {
-    --azul: #0077B6;
-    --azul-escuro: #005F91;
-    --azul-claro: #EAF7FC;
-    --branco: #FFFFFF;
-    --verde: #2E8B57;
-    --cinza: #666666;
-}
+    <title>Venha Sorrir | Clínica Odontológica</title>
 
-/* =========================
-   CABEÇALHO
-========================= */
+    <link rel="stylesheet" href="style.css">
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--azul);
-    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-    z-index: 1000;
-}
+</head>
 
-.nav {
-    max-width: 1150px;
-    margin: auto;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--branco);
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-}
+<body>
 
-.logo-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: var(--branco);
-    color: var(--azul);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.menu a {
-    color: var(--branco);
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    color: #B9E8CC;
-}
-
-.menu-button {
-    display: none;
-    border: none;
-    background: transparent;
-    color: var(--branco);
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* =========================
-   INÍCIO
-========================= */
-
-.hero {
-    min-height: 100vh;
-    padding: 130px 20px 70px;
-    background: linear-gradient(
-        135deg,
-        var(--azul),
-        #0096D6
-    );
-    color: var(--branco);
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-}
-
-.hero h1 {
-    font-size: 52px;
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #B9E8CC;
-}
-
-.hero p {
-    font-size: 19px;
-    max-width: 580px;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    background: var(--verde);
-    color: var(--branco);
-    padding: 14px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #246F46;
-    transform: translateY(-2px);
-}
-
-.hero-card {
-    min-height: 370px;
-    border-radius: 25px;
-    background: var(--branco);
-    color: var(--azul);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    padding: 30px;
-}
-
-.hero-icon {
-    font-size: 95px;
-    margin-bottom: 15px;
-}
-
-.hero-card h2 {
-    font-size: 32px;
-}
-
-/* =========================
-   SEÇÕES
-========================= */
-
-section {
-    padding: 85px 20px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    color: var(--azul);
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.section-title p {
-    color: var(--cinza);
-}
-
-/* =========================
-   SOBRE
-========================= */
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-    align-items: center;
-}
-
-.about h3 {
-    color: var(--azul);
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.about-box {
-    background: var(--azul);
-    color: var(--branco);
-    padding: 35px;
-    border-radius: 22px;
-    border-left: 6px solid var(--verde);
-}
-
-.about-box h3 {
-    color: var(--branco);
-}
-
-/* =========================
-   SERVIÇOS
-========================= */
-
-.services {
-    background: var(--azul-claro);
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background: var(--branco);
-    padding: 30px 25px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    border-bottom: 4px solid var(--verde);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-icon {
-    font-size: 43px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    color: var(--azul);
-    margin-bottom: 10px;
-}
-
-/* =========================
-   DIFERENCIAIS
-========================= */
-
-.differentials {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.differential {
-    display: flex;
-    gap: 15px;
-    background: var(--azul-claro);
-    padding: 22px;
-    border-radius: 15px;
-}
-
-.check {
-    min-width: 30px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--verde);
-    color: var(--branco);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-/* =========================
-   HORÁRIOS
-========================= */
-
-.schedule {
-    background: var(--azul);
-    color: var(--branco);
-}
-
-.schedule .section-title h2,
-.schedule .section-title p {
-    color: var(--branco);
-}
-
-.schedule-box {
-    max-width: 750px;
-    margin: auto;
-    background: var(--branco);
-    color: #333333;
-    padding: 25px 30px;
-    border-radius: 20px;
-}
-
-.schedule-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-bottom: 1px solid #EEEEEE;
-}
-
-.schedule-row:last-child {
-    border-bottom: none;
-}
-
-.schedule-row span {
-    color: var(--azul);
-    font-weight: bold;
-}
-
-/* =========================
-   ENDEREÇO
-========================= */
-
-.address {
-    background: #F8FCFE;
-}
-
-.address-card {
-    max-width: 800px;
-    margin: auto;
-    background: var(--branco);
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    text-align: center;
-    border-top: 5px solid var(--verde);
-}
-
-.address-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.address-card h3 {
-    color: var(--azul);
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
-/* =========================
-   INFORMAÇÕES DA EMPRESA
-========================= */
-
-.institutional {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.info-box {
-    background: var(--azul-claro);
-    padding: 25px;
-    border-radius: 16px;
-}
-
-.info-box h3 {
-    color: var(--azul);
-    margin-bottom: 12px;
-}
-
-/* =========================
-   CONTATO
-========================= */
-
-.contact {
-    background: var(--azul-claro);
-    text-align: center;
-}
-
-.contact p {
-    max-width: 700px;
-    margin: 0 auto 25px;
-    color: var(--cinza);
-}
-
-.phone {
-    display: block;
-    margin-top: 20px;
-    color: var(--azul);
-    font-size: 21px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* =========================
-   RODAPÉ
-========================= */
-
-footer {
-    background: #005F91;
-    color: var(--branco);
-    text-align: center;
-    padding: 35px 20px;
-}
-
-footer strong {
-    font-size: 20px;
-}
-
-footer p {
-    margin: 6px 0;
-}
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #25D366;
-    color: var(--branco);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 29px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-    z-index: 999;
-}
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 800px) {
-
-    .menu-button {
-        display: block;
-    }
-
-    .menu {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: var(--azul);
-        display: none;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu li {
-        padding: 15px 25px;
-        border-top: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 39px;
-    }
-
-    .hero p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-card {
-        min-height: 280px;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .differentials {
-        grid-template-columns: 1fr;
-    }
-
-    .institutional {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-/* =========================
-   TELAS MUITO PEQUENAS
-========================= */
-
-@media (max-width: 450px) {
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-    }
-
-    .schedule-box {
-        padding: 20px;
-    }
-
-    .schedule-row {
-        font-size: 14px;
-    }
-
-}
-
-</style></head><body><!-- =========================
-     CABEÇALHO
-========================= --><header><nav class="nav"><a href="#inicio" class="logo"><div class="logo-icon">
-🦷
-</div>Venha Sorrir
-
-</a><button class="menu-button" onclick="abrirMenu()">
-☰
-</button><ul class="menu" id="menu"><li>
-<a href="#inicio">Início</a>
-</li><li>
-<a href="#sobre">Sobre</a>
-</li><li>
-<a href="#servicos">Serviços</a>
-</li><li>
-<a href="#horarios">Horários</a>
-</li><li>
-<a href="#endereco">Endereço</a>
-</li><li>
-<a href="#contato">Contato</a>
-</li></ul></nav></header><!-- =========================
-     INÍCIO
-========================= --><section class="hero" id="inicio"><div class="hero-content"><div><h1>
-Seu sorriso,
-<span>nosso cuidado.</span>
-</h1><p>
-A Venha Sorrir é uma clínica odontológica
-localizada no Centro de Itaporanga d’Ajuda,
-Sergipe, preparada para cuidar do seu sorriso
-com atenção e acolhimento.
-</p><a
-href="https://wa.me/5579999321127?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Venha%20Sorrir."
-class="button"
-target="_blank"
-
-«»
-
-💬 Agendar atendimento
-</a>
-
-</div><div class="hero-card"><div><div class="hero-icon">
-🦷
-</div><h2>
-Venha Sorrir
-</h2><p>
-Clínica Odontológica
-</p></div></div></div></section><!-- =========================
-     SOBRE
-========================= --><section id="sobre"><div class="container"><div class="section-title"><h2>
-Sobre a Venha Sorrir
-</h2><p>
-Cuidado odontológico no coração de Itaporanga d’Ajuda.
-</p></div><div class="about"><div><h3>
-Cuidando do seu sorriso
-</h3><p>
-A Venha Sorrir é uma clínica odontológica
-localizada no Centro de Itaporanga d’Ajuda,
-Sergipe, oferecendo atendimento odontológico
-aos pacientes da região.
-</p><br><p>
-Nosso objetivo é proporcionar atendimento
-odontológico com cuidado, atenção e acolhimento,
-sempre buscando oferecer uma experiência
-positiva aos nossos pacientes.
-</p></div><div class="about-box"><h3>
-Venha Sorrir
-</h3><p>
-Clínica Odontológica localizada em
-Itaporanga d’Ajuda – Sergipe.
-</p><br><p>
-📍 Centro de Itaporanga d’Ajuda
-</p></div></div></div></section><!-- =========================
-     SERVIÇOS
-========================= --><section class="services" id="servicos"><div class="container"><div class="section-title"><h2>
-Odontologia
-</h2><p>
-Cuidando da saúde e do seu sorriso.
-</p></div><div class="cards"><div class="card"><div class="card-icon">
-🦷
-</div><h3>
-Atendimento odontológico
-</h3><p>
-Atendimento odontológico para os pacientes
-da região de Itaporanga d’Ajuda.
-</p></div><div class="card"><div class="card-icon">
-✨
-</div><h3>
-Saúde bucal
-</h3><p>
-Cuidados voltados à saúde e ao bem-estar
-bucal dos pacientes.
-</p></div><div class="card"><div class="card-icon">
-😁
-</div><h3>
-Cuidado com o sorriso
-</h3><p>
-Atenção às necessidades de cada paciente
-e ao cuidado com o sorriso.
-</p></div><div class="card"><div class="card-icon">
-🪥
-</div><h3>
-Prevenção
-</h3><p>
-Cuidados preventivos para ajudar a manter
-uma boa saúde bucal.
-</p></div><div class="card"><div class="card-icon">
-🦷
-</div><h3>
-Prótese dentária
-</h3><p>
-A clínica possui atividade secundária
-cadastrada em serviços de prótese dentária.
-</p></div><div class="card"><div class="card-icon">
-💚
-</div><h3>
-Atendimento acolhedor
-</h3><p>
-Um espaço voltado para oferecer uma
-experiência confortável aos pacientes.
-</p></div></div></div></section><!-- =========================
-     DIFERENCIAIS
-========================= --><section><div class="container"><div class="section-title"><h2>
-Por que escolher a Venha Sorrir?
-</h2></div><div class="differentials"><div class="differential"><div class="check">
-✓
-</div><div><strong>
-Localização central
-</strong><p>
-Clínica localizada no Centro de
-Itaporanga d’Ajuda.
-</p></div></div><div class="differential"><div class="check">
-✓
-</div><div><strong>
-Atendimento odontológico
-</strong><p>
-Serviços voltados aos cuidados
-com a saúde bucal.
-</p></div></div><div class="differential"><div class="check">
-✓
-</div><div><strong>
-Prótese dentária
-</strong><p>
-Serviços de prótese dentária
-constam como atividade secundária.
-</p></div></div><div class="differential"><div class="check">
-✓
-</div><div><strong>
-Fácil contato
-</strong><p>
-Entre em contato diretamente pelo
-WhatsApp da clínica.
-</p></div></div></div></div></section><!-- =========================
-     HORÁRIOS
-========================= --><section class="schedule" id="horarios"><div class="container"><div class="section-title"><h2>
-Horário de funcionamento
-</h2><p>
-Confira os horários de atendimento da clínica.
-</p></div><div class="schedule-box"><div class="schedule-row"><strong>
-Segunda-feira
-</strong><span>
-08:30 às 17:00
-</span></div><div class="schedule-row"><strong>
-Terça-feira
-</strong><span>
-08:30 às 17:00
-</span></div><div class="schedule-row"><strong>
-Quarta-feira
-</strong><span>
-08:30 às 17:00
-</span></div><div class="schedule-row"><strong>
-Quinta-feira
-</strong><span>
-08:30 às 17:00
-</span></div><div class="schedule-row"><strong>
-Sexta-feira
-</strong><span>
-08:30 às 17:00
-</span></div><div class="schedule-row"><strong>
-Sábado
-</strong><span>
-08:30 às 12:00
-</span></div><div class="schedule-row"><strong>
-Domingo
-</strong><span>
-Fechado
-</span></div></div></div></section><!-- =========================
-     ENDEREÇO
-========================= --><section class="address" id="endereco"><div class="container"><div class="section-title"><h2>
-Onde estamos
-</h2><p>
-Visite a Venha Sorrir.
-</p></div><div class="address-card"><div class="address-icon">
-📍
-</div><h3>
-Venha Sorrir
-</h3><p>
-Avenida Deputado José Conde Sobral,
-nº 18, Centro
-</p><p>
-Itaporanga d’Ajuda – Sergipe
-</p><p>
-CEP 49120-000
-</p><br><a
-href="https://www.google.com/maps/search/?api=1&query=Avenida+Deputado+José+Conde+Sobral+18,+Centro,+Itaporanga+d'Ajuda,+Sergipe"
-class="button"
-target="_blank"
-
-«»
-
-📍 Abrir no Google Maps
-</a>
-
-</div></div></section><!-- =========================
-     INFORMAÇÕES INSTITUCIONAIS
-========================= --><section><div class="container"><div class="section-title"><h2>
-Informações da clínica
-</h2><p>
-Dados institucionais da Venha Sorrir.
-</p></div><div class="institutional"><div class="info-box"><h3>
-Nome fantasia
-</h3><p>
-Venha Sorrir
-</p></div><div class="info-box"><h3>
-Segmento
-</h3><p>
-Clínica Odontológica / Odontologia
-</p></div><div class="info-box"><h3>
-Razão Social
-</h3><p>
-Vania de Cassia Oliveira
-</p></div><div class="info-box"><h3>
-CNPJ
-</h3><p>
-15.137.146/0001-50
-</p></div><div class="info-box"><h3>
-Atividade principal
-</h3><p>
-Atividade odontológica
-</p></div><div class="info-box"><h3>
-Atividade secundária
-</h3><p>
-Serviços de prótese dentária
-</p></div></div></div></section><!-- =========================
-     CONTATO
-========================= --><section class="contact" id="contato"><div class="container"><div class="section-title"><h2>
-Entre em contato
-</h2><p>
-Agende seu atendimento ou tire suas dúvidas.
-</p></div><p>
-Para informações e agendamentos,
-entre em contato com a Venha Sorrir
-pelo WhatsApp.
-</p><a
-href="https://wa.me/5579999321127?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos%20da%20Venha%20Sorrir."
-class="button"
-target="_blank"
-
-«»
-
-💬 Falar pelo WhatsApp
-</a>
-
-<a
-href="tel:+5579999321127"
-class="phone"
-
-«»
-
-📞 (79) 99932-1127
-</a>
-
-</div></section><!-- =========================
-     RODAPÉ
-========================= --><footer><p>
-<strong>
-Venha Sorrir
-</strong>
-</p><p>
-Clínica Odontológica
-</p><p>
-Avenida Deputado José Conde Sobral, nº 18,
-Centro, Itaporanga d’Ajuda – Sergipe
-</p><p>
-CEP 49120-000
-</p><p>
-© 2026 Venha Sorrir. Todos os direitos reservados.
-</p></footer><!-- =========================
-     WHATSAPP FLUTUANTE
-========================= --><a
-href="https://wa.me/5579999321127?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Venha%20Sorrir."
-class="whatsapp"
-target="_blank"
-aria-label="Falar com a Venha Sorrir pelo WhatsApp"
-
-«»
-
-💬
-</a>
 
 <!-- =========================
-     JAVASCRIPT
-========================= --><script>
+     CABEÇALHO
+========================= -->
 
-function abrirMenu() {
+<header class="header">
 
-    const menu = document.getElementById("menu");
+    <div class="container nav">
 
-    menu.classList.toggle("active");
+        <a href="#inicio" class="logo">
 
-}
+            <span class="logo-mark">VS</span>
+
+            <span>
+                Venha Sorrir
+            </span>
+
+        </a>
 
 
-document.querySelectorAll(".menu a").forEach(function(link) {
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
 
-    link.addEventListener("click", function() {
 
-        document.getElementById("menu").classList.remove("active");
+        <nav class="menu" id="menu">
 
-    });
+            <a href="#inicio">
+                Início
+            </a>
 
-});
+            <a href="#sobre">
+                Sobre
+            </a>
 
-</script></body></html>
+            <a href="#servicos">
+                Serviços
+            </a>
+
+            <a href="#horarios">
+                Horários
+            </a>
+
+            <a href="#endereco">
+                Endereço
+            </a>
+
+            <a href="#contato">
+                Contato
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     PÁGINA PRINCIPAL
+========================= -->
+
+<main id="paginaPrincipal">
+
+
+<!-- =========================
+     INÍCIO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="container hero-grid">
+
+
+        <div class="hero-text">
+
+            <span class="eyebrow">
+                CLÍNICA ODONTOLÓGICA
+            </span>
+
+
+            <h1>
+                Seu sorriso merece
+                <strong>cuidado.</strong>
+            </h1>
+
+
+            <p>
+                A Venha Sorrir oferece atendimento
+                odontológico no Centro de
+                Itaporanga d’Ajuda, Sergipe,
+                com atenção, cuidado e acolhimento.
+            </p>
+
+
+            <!-- ÚNICO BOTÃO DE WHATSAPP DO INÍCIO -->
+
+            <a
+                href="https://wa.me/5579999321127?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Venha%20Sorrir."
+                class="btn btn-gold"
+                target="_blank"
+                rel="noopener"
+            >
+                Falar pelo WhatsApp
+            </a>
+
+        </div>
+
+
+
+        <div class="hero-card">
+
+            <div class="hero-logo">
+
+                <span>
+                    VS
+                </span>
+
+            </div>
+
+            <h2>
+                Venha Sorrir
+            </h2>
+
+            <p>
+                Clínica Odontológica
+            </p>
+
+            <div class="hero-line"></div>
+
+            <small>
+                Itaporanga d’Ajuda • Sergipe
+            </small>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="section" id="sobre">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                SOBRE NÓS
+            </span>
+
+            <h2>
+                Cuidado com o seu sorriso
+            </h2>
+
+            <p>
+                Conheça a Venha Sorrir.
+            </p>
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <div class="about-text">
+
+                <h3>
+                    Uma clínica odontológica
+                    em Itaporanga d’Ajuda
+                </h3>
+
+
+                <p>
+                    A Venha Sorrir é uma clínica
+                    odontológica localizada no Centro
+                    de Itaporanga d’Ajuda, Sergipe,
+                    oferecendo atendimento odontológico
+                    aos pacientes da região.
+                </p>
+
+
+                <p>
+                    Nosso propósito é proporcionar
+                    atendimento com cuidado, atenção
+                    e acolhimento, buscando uma
+                    experiência confortável para cada
+                    paciente.
+                </p>
+
+            </div>
+
+
+
+            <div class="about-box">
+
+                <div class="about-detail">
+
+                    <span>
+                        Localização
+                    </span>
+
+                    <strong>
+                        Centro de Itaporanga d’Ajuda
+                    </strong>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <span>
+                        Segmento
+                    </span>
+
+                    <strong>
+                        Clínica Odontológica
+                    </strong>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <span>
+                        Atendimento
+                    </span>
+
+                    <strong>
+                        Segunda a sábado
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+
+<section class="section section-blue" id="servicos">
+
+    <div class="container">
+
+
+        <div class="section-heading light">
+
+            <span>
+                SERVIÇOS
+            </span>
+
+            <h2>
+                Cuidados para o seu sorriso
+            </h2>
+
+            <p>
+                Conheça as áreas de atuação da clínica.
+            </p>
+
+        </div>
+
+
+
+        <div class="service-grid">
+
+
+            <article class="service-card">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Atendimento odontológico
+                </h3>
+
+                <p>
+                    Atendimento voltado aos cuidados
+                    com a saúde bucal dos pacientes.
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Saúde bucal
+                </h3>
+
+                <p>
+                    Cuidados e orientações para
+                    manutenção da saúde bucal.
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Prevenção
+                </h3>
+
+                <p>
+                    Cuidados preventivos para ajudar
+                    a preservar a saúde dos dentes
+                    e da boca.
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h3>
+                    Prótese dentária
+                </h3>
+
+                <p>
+                    A clínica possui serviços de
+                    prótese dentária como atividade
+                    secundária cadastrada.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HORÁRIOS
+========================= -->
+
+<section class="section" id="horarios">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                ATENDIMENTO
+            </span>
+
+            <h2>
+                Horários de funcionamento
+            </h2>
+
+            <p>
+                Toque em um dia para conhecer
+                os detalhes do atendimento.
+            </p>
+
+        </div>
+
+
+
+        <div class="schedule-preview">
+
+
+            <button
+                class="schedule-item"
+                data-day="segunda"
+            >
+
+                <span>
+                    Segunda-feira
+                </span>
+
+                <strong>
+                    08:30 às 17:00
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="schedule-item"
+                data-day="terca"
+            >
+
+                <span>
+                    Terça-feira
+                </span>
+
+                <strong>
+                    08:30 às 17:00
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="schedule-item"
+                data-day="quarta"
+            >
+
+                <span>
+                    Quarta-feira
+                </span>
+
+                <strong>
+                    08:30 às 17:00
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="schedule-item"
+                data-day="quinta"
+            >
+
+                <span>
+                    Quinta-feira
+                </span>
+
+                <strong>
+                    08:30 às 17:00
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="schedule-item"
+                data-day="sexta"
+            >
+
+                <span>
+                    Sexta-feira
+                </span>
+
+                <strong>
+                    08:30 às 17:00
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="schedule-item"
+                data-day="sabado"
+            >
+
+                <span>
+                    Sábado
+                </span>
+
+                <strong>
+                    08:30 às 12:00
+                </strong>
+
+            </button>
+
+
+
+            <div class="schedule-item closed">
+
+                <span>
+                    Domingo
+                </span>
+
+                <strong>
+                    Fechado
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ENDEREÇO
+========================= -->
+
+<section class="section section-light" id="endereco">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                LOCALIZAÇÃO
+            </span>
+
+            <h2>
+                Onde estamos
+            </h2>
+
+            <p>
+                Encontre a Venha Sorrir.
+            </p>
+
+        </div>
+
+
+
+        <div class="address-card">
+
+
+            <div class="address-icon">
+                01
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Venha Sorrir
+                </h3>
+
+
+                <p>
+                    Avenida Deputado José Conde Sobral,
+                    nº 18, Centro
+                </p>
+
+
+                <p>
+                    Itaporanga d’Ajuda – Sergipe
+                </p>
+
+
+                <p>
+                    CEP 49120-000
+                </p>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Avenida+Deputado+José+Conde+Sobral,+18,+Centro,+Itaporanga+d'Ajuda,+SE"
+                    target="_blank"
+                    rel="noopener"
+                    class="map-link"
+                >
+                    Ver localização no Google Maps →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INFORMAÇÕES
+========================= -->
+
+<section class="section" id="informacoes">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                INFORMAÇÕES
+            </span>
+
+            <h2>
+                Dados da clínica
+            </h2>
+
+        </div>
+
+
+
+        <div class="info-grid">
+
+
+            <div class="info-card">
+
+                <span>
+                    Nome fantasia
+                </span>
+
+                <strong>
+                    Venha Sorrir
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    Razão Social
+                </span>
+
+                <strong>
+                    Vania de Cassia Oliveira
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    CNPJ
+                </span>
+
+                <strong>
+                    15.137.146/0001-50
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    Atividade principal
+                </span>
+
+                <strong>
+                    Atividade odontológica
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    Atividade secundária
+                </span>
+
+                <strong>
+                    Serviços de prótese dentária
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    Segmento
+                </span>
+
+                <strong>
+                    Clínica Odontológica
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section class="contact-section" id="contato">
+
+    <div class="container">
+
+
+        <div class="contact-content">
+
+            <span>
+                FALE CONOSCO
+            </span>
+
+
+            <h2>
+                Cuide do seu sorriso.
+            </h2>
+
+
+            <p>
+                Para informações e agendamentos,
+                entre em contato com a Venha Sorrir.
+            </p>
+
+
+            <div class="contact-phone">
+                (79) 99932-1127
+            </div>
+
+
+            <!-- SEGUNDO E ÚLTIMO BOTÃO DE WHATSAPP -->
+
+            <a
+                href="https://wa.me/5579999321127?text=Olá!%20Gostaria%20de%20entrar%20em%20contato%20com%20a%20Venha%20Sorrir."
+                class="btn btn-outline"
+                target="_blank"
+                rel="noopener"
+            >
+                Falar pelo WhatsApp
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <strong>
+                Venha Sorrir
+            </strong>
+
+            <p>
+                Clínica Odontológica
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                Avenida Deputado José Conde Sobral,
+                nº 18, Centro
+            </p>
+
+            <p>
+                Itaporanga d’Ajuda – Sergipe
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                (79) 99932-1127
+            </p>
+
+            <p>
+                © 2026 Venha Sorrir
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     JANELA DE HORÁRIOS
+========================= -->
+
+<div
+    class="schedule-modal"
+    id="scheduleModal"
+    aria-hidden="true"
+>
+
+    <div class="schedule-modal-box">
+
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Fechar"
+        >
+            ×
+        </button>
+
+
+        <span class="modal-label">
+            ATENDIMENTO
+        </span>
+
+
+        <h2 id="modalTitle">
+            Segunda-feira
+        </h2>
+
+
+        <div class="modal-time" id="modalTime">
+            08:30 às 17:00
+        </div>
+
+
+        <p id="modalDescription">
+            Atendimento durante o horário informado.
+        </p>
+
+
+        <a
+            id="modalWhatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="modal-whatsapp"
+        >
+            Consultar pelo WhatsApp
+        </a>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
