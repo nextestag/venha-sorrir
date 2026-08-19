@@ -1448,3 +1448,7 @@ footer {
 .hero-logo span {
     font-size: 40px;
 }
+.logo-mark,
+.hero-logo {
+    background: #D1D5DB;
+}
